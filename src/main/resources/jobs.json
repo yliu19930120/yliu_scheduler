@@ -1,0 +1,9 @@
+{
+	"jobs": [{
+		"jobName":"51job爬虫",
+		"jobId": "job_01",
+		"channel": "JOBS",
+		"message": "JOB_CRAWLER",
+		"cron": "0 * * * * ?"
+	}]
+}
