@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
-	<property name="project" value="yliu_schedule" />
+	<property name="project" value="yliu_scheduler" />
 	<property name="path" value="./logs" />
 
 	<appender name="FILE"
@@ -8,9 +8,8 @@
 		<file>${path}/${project}.log</file>
 
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-			<FileNamePattern>${path}/${project}.%i.log.gz</FileNamePattern>
-			<MinIndex>1</MinIndex>
-			<MaxIndex>5</MaxIndex>
+			<FileNamePattern>${path}/${project}.%d{yyyyMMdd}.log.gz</FileNamePattern>
+			<maxHistory>30</maxHistory>>
 		</rollingPolicy>
 
 		<triggeringPolicy
