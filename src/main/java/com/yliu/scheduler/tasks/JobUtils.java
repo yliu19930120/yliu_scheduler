@@ -25,7 +25,7 @@ public class JobUtils {
 		String json = null;
 		
 		try {
-			 json = FileUtils.readFileToString(new File("src/main/resources/jobs.json"));
+			 json = FileUtils.readFileToString(new File("jobs.json"));
 			 JSONObject jsonObj = JSON.parseObject(json);
 			 List<Job> jobs = jsonObj.getJSONArray("jobs").toJavaList(Job.class);
 			 log.info("读取job数量={}",jobs.size());
