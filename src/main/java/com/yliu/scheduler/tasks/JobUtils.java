@@ -17,16 +17,12 @@ public class JobUtils {
 			
 	public static final Map<String,Job> KEY_JOB_MAP = new HashMap<>();
 
-	static{
-		new JobUtils().readJson();
-	}
-	
-	private  void readJson(){
+	public  static void initJobs(){
 		String json = null;
 		
 		try {
-			 InputStream is = this.getClass().getResourceAsStream("/jobs.json");
-			 json = IOUtils.toString(is);
+			 InputStream input = new Resource().gerResourceInput("jobs.json");
+			 json = IOUtils.toString(input);
 			 JSONObject jsonObj = JSON.parseObject(json);
 			 List<Job> jobs = jsonObj.getJSONArray("jobs").toJavaList(Job.class);
 			 log.info("读取job数量={}",jobs.size());

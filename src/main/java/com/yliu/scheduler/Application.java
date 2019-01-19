@@ -33,6 +33,8 @@ public class Application {
 		offLog.setLevel(Level.OFF);
 		try {
 			
+			JobUtils.initJobs();
+			
 	        Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
 	        
 	        List<Job> jobs = new ArrayList<>(JobUtils.KEY_JOB_MAP.values());

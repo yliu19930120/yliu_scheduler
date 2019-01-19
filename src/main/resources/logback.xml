@@ -7,8 +7,8 @@
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>${path}/${project}.log</file>
 
-		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-			<FileNamePattern>${path}/${project}.%d.log.gz</FileNamePattern>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${path}/${project}.%d{yyyyMMdd}.log.gz</FileNamePattern>
 			<maxHistory>30</maxHistory>>
 		</rollingPolicy>
 		
