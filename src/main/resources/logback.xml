@@ -8,14 +8,10 @@
 		<file>${path}/${project}.log</file>
 
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-			<FileNamePattern>${path}/${project}.%d{yyyyMMdd}.log.gz</FileNamePattern>
+			<FileNamePattern>${path}/${project}.%d.log.gz</FileNamePattern>
 			<maxHistory>30</maxHistory>>
 		</rollingPolicy>
 		
-		<triggeringPolicy
-			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
-			<MaxFileSize>5MB</MaxFileSize>
-		</triggeringPolicy>
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}][%level][%thread]%-5logger-%msg%n</pattern>
 		</layout>
