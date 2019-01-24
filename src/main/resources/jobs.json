@@ -4,6 +4,6 @@
 		"jobId": "job_01",
 		"channel": "JOBS",
 		"message": "JOB_CRAWLER",
-		"cron": "0 0 17 * * 6"
+		"cron": "0 30 17 ? * FRI"
 	}]
 }
