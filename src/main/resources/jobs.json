@@ -5,5 +5,11 @@
 		"channel": "JOBS",
 		"message": "JOB_CRAWLER",
 		"cron": "0 30 17 ? * FRI"
+	},{
+		"jobName":"神秘代码爬虫",
+		"jobId": "job_02",
+		"channel": "JOBS",
+		"message": "VEDIO_CRAWLER",
+		"cron": "0 0 0 ? * *"
 	}]
 }
