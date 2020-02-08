@@ -11,5 +11,11 @@
 		"channel": "JOBS",
 		"message": "VEDIO_CRAWLER",
 		"cron": "0 0 0 ? * *"
+	},{
+		"jobName":"种子爬虫",
+		"jobId": "job_03",
+		"channel": "JOBS",
+		"message": "TORRENT_CRAWLER",
+		"cron": "0 0 0 ? * FRI"
 	}]
 }
